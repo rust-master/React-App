@@ -54,7 +54,7 @@ module.exports = {
           A400: "#287bff",
         },
         colors: "#0067DC",
-        colors1: "0067DC",
+        colors1: "#FFFF00",
         pink: {
           200: "#ff92ae",
           300: "#f76680",
@@ -94,7 +94,7 @@ module.exports = {
         gradient8: "linear-gradient(225deg ,#0067dc,#0067dc,#0067dc)",
         gradient9: "linear-gradient(225deg ,#0067dc,#57007b)",
         gradient10: "linear-gradient(225deg ,#009ef5,#009ef5,#0067dc)",
-        gradient11: "linear-gradient(225deg ,#868686,#f1f5f9)",
+        gradient11: "linear-gradient(225deg ,#E9F3FF,#E9F3FF)",
       },
     },
   },

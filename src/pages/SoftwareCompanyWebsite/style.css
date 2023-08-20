@@ -1,0 +1,28 @@
+.fixed-header {
+    position: fixed;
+    top: 0;
+    background-color: #fff; /* Change this to your desired background color */
+    z-index: 1000; /* Adjust the z-index to make sure it's on top of other elements */
+  }
+  
+  /* Adjust the top position to hide the header off-screen initially */
+  .fixed-header.hidden {
+    top: -100px; /* Adjust this value based on your header's height */
+  }
+
+  .hover-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: scale(1);
+  }
+  
+  .hover-card:hover {
+    border: 2px solid #0067dc;
+    color: #0067dc;
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .hover-card:hover .text-card {
+    color: #0067dc;
+  }

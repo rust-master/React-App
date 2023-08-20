@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./style.css";
+
 import { Button, Img, Input, Line, List, Text, TextArea } from "components";
 import SoftwareCompanyWebsiteCardsm from "components/SoftwareCompanyWebsiteCardsm";
 import SoftwareCompanyWebsiteColumnOne from "components/SoftwareCompanyWebsiteColumnOne";
@@ -125,7 +127,9 @@ const SoftwareCompanyWebsitePage = () => {
     <>
       <div className="bg-white-A700 flex flex-col font-bevietnampro items-center justify-start mx-auto w-full">
         <div className="flex flex-col items-start justify-start w-full">
-          <header className="bg-white-A700 flex md:flex-col flex-row md:gap-5 items-center justify-center md:px-5 shadow-bs2 w-full">
+          <header
+            className={`bg-white-A700 flex md:flex-col flex-row md:gap-5 items-center justify-center md:px-5 shadow-bs2 w-full fixed-header`}
+          >
             <Img
               className="md:flex-1 h-[70px] sm:h-auto mb-[29px] md:ml-[0] ml-[104px] md:mt-0 mt-9 object-cover w-[14%] md:w-full"
               src="images/img_microitindustry.png"
@@ -135,14 +139,9 @@ const SoftwareCompanyWebsitePage = () => {
               <Button className="bg-transparent cursor-pointer min-w-[84px] text-center text-gray-700 text-xl">
                 Services
               </Button>
-              <div className="flex flex-col items-center justify-start w-auto">
-                <Text
-                  className="text-gray-700 text-xl w-auto"
-                  size="txtBeVietnamProRegular20"
-                >
-                  Industries
-                </Text>
-              </div>
+              <Button className="bg-transparent cursor-pointer min-w-[95px] text-center text-gray-700 text-xl">
+                Industry
+              </Button>
               <Button className="bg-transparent cursor-pointer min-w-[95px] text-center text-gray-700 text-xl">
                 Company
               </Button>
@@ -151,7 +150,8 @@ const SoftwareCompanyWebsitePage = () => {
               Contact US
             </Button>
           </header>
-          <div className="md:h-[1329px] h-[1511px] sm:h-[2361px] mt-[78px] md:px-5 relative w-full">
+
+          <div className="md:h-[1329px] h-[1511px] sm:h-[2361px] mt-[190px] md:px-5 relative w-full">
             <div className="absolute md:h-[1130px] h-[1511px] inset-y-[0] my-auto right-[2%] w-[91%] md:w-full">
               <div className="flex flex-col h-full items-center justify-start m-auto w-full">
                 <div className="flex flex-col md:gap-10 gap-[893px] items-start justify-start w-full">
@@ -187,7 +187,7 @@ const SoftwareCompanyWebsitePage = () => {
                             is global
                           </span>
                           <span className="text-gray-900 font-bevietnampro text-left font-light">
-                            <>mission to </>
+                            <> mission to </>
                           </span>
                           <span className="text-gray-900 font-inter text-left font-extrabold">
                             <>
@@ -233,7 +233,7 @@ const SoftwareCompanyWebsitePage = () => {
                   <div className="bg-gradient3  h-[72px] rounded-[50%] w-[72px]"></div>
                 </div>
               </div>
-              <div className="absolute bg-gradient3  h-[94px] left-[41%] rotate-[23deg] rounded-[50%] top-[36%] w-[94px]"></div>
+              <div className="absolute bg-gradient3  h-[94px] left-[41%] rotate-[23deg] rounded-[50%] top-[37%] w-[94px]"></div>
             </div>
             <div className="absolute bottom-[2%] flex flex-col inset-x-[0] items-center justify-start mx-auto w-full">
               <Line className="bg-blue-700 h-px w-full" />
@@ -241,39 +241,36 @@ const SoftwareCompanyWebsitePage = () => {
                 <div className="flex flex-col gap-[53px] items-center justify-start mb-[19px] w-[94%] md:w-full">
                   <div className="flex flex-col items-center justify-start">
                     <Text
-                      className="sm:text-4xl md:text-[38px] text-[40px] text-gray-900"
+                      className="sm:text-4xl md:text-[38px] text-[36px] text-gray-900"
                       size="txtBeVietnamProBold40"
                     >
-                      Technology Consulting & Development Services
+                      <span className="text-gray-900 font-bevietnampro text-left font-normal">
+                        Technology Consulting
+                      </span>{" "}
+                      & Development Services
                     </Text>
                   </div>
                   <div className="flex flex-col items-center justify-start w-full">
                     <div className="md:gap-5 gap-[46px] grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-center min-h-[auto] w-full">
-                      <div
-                        className="bg-cover bg-no-repeat border-colors1 border-solid flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 text-colors w-full"
-                        style={{
-                          backgroundImage: "url('images/img_servicecard.png')",
-                        }}
-                      >
+
+                      <div className="bg-cover bg-no-repeat border-solid border rounded-lg flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 w-full hover-card">
                         <div className="flex flex-col gap-[9px] items-center justify-start mb-1 w-[54%] md:w-full">
-                          <Img
+                        <Img
                             className="h-[100px] md:h-auto object-cover w-[100px]"
                             src="images/img_cybersecurity.png"
                             alt="cybersecurity"
                           />
                           <Text
-                            className="bg-clip-text bg-gradient4  text-2xl md:text-[22px] text-transparent sm:text-xl"
+                            className="bg-clip-text bg-gradient5 text-2xl md:text-[22px] text-transparent sm:text-xl text-card"
                             size="txtBeVietnamProSemiBold24"
                           >
                             Cyber Security
                           </Text>
                         </div>
                       </div>
+
                       <div
-                        className="bg-cover bg-no-repeat flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 w-full"
-                        style={{
-                          backgroundImage: "url('images/img_servicecard.png')",
-                        }}
+                        className="bg-cover bg-no-repeat border-solid border rounded-lg flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 w-full hover-card"
                       >
                         <div className="flex flex-col gap-[11px] items-center justify-start mb-0.5 w-[89%] md:w-full">
                           <Img
@@ -282,7 +279,7 @@ const SoftwareCompanyWebsitePage = () => {
                             alt="blockchaintechn"
                           />
                           <Text
-                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl"
+                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl text-card"
                             size="txtBeVietnamProSemiBold24Black900"
                           >
                             Blockchain Development
@@ -290,10 +287,7 @@ const SoftwareCompanyWebsitePage = () => {
                         </div>
                       </div>
                       <div
-                        className="bg-cover bg-no-repeat flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 w-full"
-                        style={{
-                          backgroundImage: "url('images/img_servicecard.png')",
-                        }}
+                        className="bg-cover bg-no-repeat border-solid border rounded-lg flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 w-full hover-card"
                       >
                         <div className="flex flex-col gap-2.5 items-start justify-start mb-[3px] w-[30%] md:w-full">
                           <Img
@@ -302,7 +296,7 @@ const SoftwareCompanyWebsitePage = () => {
                             alt="artificialintel"
                           />
                           <Text
-                            className="bg-clip-text bg-gradient5  ml-0.5 md:ml-[0] text-2xl md:text-[22px] text-transparent sm:text-xl"
+                            className="bg-clip-text bg-gradient5  ml-0.5 md:ml-[0] text-2xl md:text-[22px] text-transparent sm:text-xl text-card"
                             size="txtBeVietnamProSemiBold24Black900"
                           >
                             AI/ML
@@ -310,10 +304,7 @@ const SoftwareCompanyWebsitePage = () => {
                         </div>
                       </div>
                       <div
-                        className="bg-cover bg-no-repeat flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 w-full"
-                        style={{
-                          backgroundImage: "url('images/img_servicecard.png')",
-                        }}
+                        className="bg-cover bg-no-repeat border-solid border rounded-lg flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 w-full hover-card"
                       >
                         <div className="flex flex-col gap-[11px] justify-start mb-0.5 w-[74%] md:w-full">
                           <Img
@@ -322,7 +313,7 @@ const SoftwareCompanyWebsitePage = () => {
                             alt="imageOne"
                           />
                           <Text
-                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl"
+                            className="bg-clip-text bg-gradient5 text-2xl md:text-[22px] text-transparent sm:text-xl text-card"
                             size="txtBeVietnamProSemiBold24Black900"
                           >
                             Quantum Computing
@@ -330,10 +321,7 @@ const SoftwareCompanyWebsitePage = () => {
                         </div>
                       </div>
                       <div
-                        className="bg-cover bg-no-repeat flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 w-full"
-                        style={{
-                          backgroundImage: "url('images/img_servicecard.png')",
-                        }}
+                        className="bg-cover bg-no-repeat border-solid border rounded-lg flex flex-1 flex-col h-[187px] items-center justify-start p-[21px] sm:px-5 shadow-bs3 w-full hover-card"
                       >
                         <div className="flex flex-col gap-[11px] justify-start mb-0.5 w-[98%] md:w-full">
                           <Img
@@ -342,7 +330,7 @@ const SoftwareCompanyWebsitePage = () => {
                             alt="laptopcoding"
                           />
                           <Text
-                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl"
+                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl text-card"
                             size="txtBeVietnamProSemiBold24Black900"
                           >
                             Web Design & Development
@@ -350,10 +338,7 @@ const SoftwareCompanyWebsitePage = () => {
                         </div>
                       </div>
                       <div
-                        className="bg-cover bg-no-repeat flex flex-1 flex-col h-[187px] items-center justify-start p-[22px] sm:px-5 shadow-bs3 w-full"
-                        style={{
-                          backgroundImage: "url('images/img_servicecard.png')",
-                        }}
+                        className="bg-cover bg-no-repeat border-solid border rounded-lg flex flex-1 flex-col h-[187px] items-center justify-start p-[22px] sm:px-5 shadow-bs3 w-full hover-card"
                       >
                         <div className="flex flex-col gap-[15px] items-center justify-start w-[90%] md:w-full">
                           <Img
@@ -362,7 +347,7 @@ const SoftwareCompanyWebsitePage = () => {
                             alt="imageTwo"
                           />
                           <Text
-                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl"
+                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl text-card"
                             size="txtBeVietnamProSemiBold24Black900"
                           >
                             Mobile App Development
@@ -370,10 +355,7 @@ const SoftwareCompanyWebsitePage = () => {
                         </div>
                       </div>
                       <div
-                        className="bg-cover bg-no-repeat flex flex-1 flex-col h-[187px] items-center justify-start p-3 shadow-bs3 w-full"
-                        style={{
-                          backgroundImage: "url('images/img_servicecard.png')",
-                        }}
+                        className="bg-cover bg-no-repeat border-solid border rounded-lg flex flex-1 flex-col h-[187px] items-center justify-start p-3 shadow-bs3 w-full hover-card"
                       >
                         <div className="flex flex-col gap-2.5 justify-start mb-3 mt-[9px] w-full">
                           <Img
@@ -382,7 +364,7 @@ const SoftwareCompanyWebsitePage = () => {
                             alt="imageThree"
                           />
                           <Text
-                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl"
+                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl text-card"
                             size="txtBeVietnamProSemiBold24Black900"
                           >
                             WordPress/Wix Development
@@ -390,10 +372,7 @@ const SoftwareCompanyWebsitePage = () => {
                         </div>
                       </div>
                       <div
-                        className="bg-cover bg-no-repeat flex flex-1 flex-col h-[187px] items-center justify-end p-[25px] sm:px-5 shadow-bs3 w-full"
-                        style={{
-                          backgroundImage: "url('images/img_servicecard.png')",
-                        }}
+                        className="bg-cover bg-no-repeat border-solid border rounded-lg flex flex-1 flex-col h-[187px] items-center justify-end p-[25px] sm:px-5 shadow-bs3 w-full hover-card"
                       >
                         <div className="flex flex-col gap-[21px] justify-start w-[79%] md:w-full">
                           <Img
@@ -402,7 +381,7 @@ const SoftwareCompanyWebsitePage = () => {
                             alt="imageFour"
                           />
                           <Text
-                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl"
+                            className="bg-clip-text bg-gradient5  text-2xl md:text-[22px] text-transparent sm:text-xl text-card"
                             size="txtBeVietnamProSemiBold24Black900"
                           >
                             Automation Software
@@ -410,10 +389,7 @@ const SoftwareCompanyWebsitePage = () => {
                         </div>
                       </div>
                       <div
-                        className="bg-cover bg-no-repeat flex flex-1 flex-col h-[187px] items-center justify-start p-[18px] shadow-bs3 w-full"
-                        style={{
-                          backgroundImage: "url('images/img_servicecard.png')",
-                        }}
+                        className="bg-cover bg-no-repeat border-solid border rounded-lg flex flex-1 flex-col h-[187px] items-center justify-start p-[18px] shadow-bs3 w-full hover-card"
                       >
                         <div className="flex flex-col gap-[11px] items-center justify-start mb-2 mt-[3px] w-full">
                           <Img
@@ -422,7 +398,7 @@ const SoftwareCompanyWebsitePage = () => {
                             alt="imacsettings"
                           />
                           <Text
-                            className="bg-clip-text bg-gradient5  text-[22px] sm:text-lg text-transparent md:text-xl"
+                            className="bg-clip-text bg-gradient5  text-[22px] sm:text-lg text-transparent md:text-xl text-card"
                             size="txtBeVietnamProSemiBold22"
                           >
                             Custom Software Development{" "}
@@ -961,7 +937,7 @@ const SoftwareCompanyWebsitePage = () => {
                             {...props}
                           />
                         </React.Fragment>
-                      ),
+                      )
                     )}
                   </div>
                 </div>
@@ -1315,36 +1291,34 @@ const SoftwareCompanyWebsitePage = () => {
                     </Text>
                   </div>
                   <Text
-                    className="leading-[15.00px] mt-11 text-4xl sm:text-[32px] md:text-[34px] text-gray-900_02"
+                    className="leading-[15.00px] mt-11 text-3xl sm:text-[32px] md:text-[34px] text-gray-900_02"
                     size="txtBeVietnamProMedium36"
                   >
-                    <>
-                      Let build something
-                      <br />
-                      awesome together
-                    </>
+                    Let build something awesome together
                   </Text>
                   <Input
                     name="groupFive"
                     placeholder="Name"
                     className="font-bevietnampro font-medium leading-[normal] p-0 placeholder:text-blue_gray-700_01 sm:px-5 text-blue_gray-700_01 text-left text-xl w-full"
-                    wrapClassName="bg-teal-50 border border-blue-700 border-solid mt-[93px] pl-[26px] pr-[35px] py-[21px] w-full"
+                    wrapClassName="bg-teal-50 border border-blue-700 border-solid mt-[80px] pl-[26px] pr-[35px] py-[21px] w-full"
                     type="text"
                   ></Input>
                   <Input
                     name="groupFour"
                     placeholder="Email"
                     className="font-bevietnampro font-medium leading-[normal] p-0 placeholder:text-blue_gray-700_01 sm:px-5 text-blue_gray-700_01 text-left text-xl w-full"
-                    wrapClassName="bg-teal-50 border border-blue-700 border-solid mt-[52px] pl-[26px] pr-[35px] py-[21px] w-full"
+                    wrapClassName="bg-teal-50 border border-blue-700 border-solid mt-[42px] pl-[26px] pr-[35px] py-[21px] w-full"
                     type="email"
                   ></Input>
                   <TextArea
-                    className="bg-teal-50 border border-blue-700 border-solid font-bevietnampro font-medium leading-[normal] mt-[52px] pb-[35px] pl-[26px] pr-[35px] pt-[21px] sm:px-5 placeholder:text-blue_gray-700_01 text-blue_gray-700_01 text-left text-xl w-full"
+                    className="bg-teal-50 border border-blue-700 border-solid font-bevietnampro font-medium leading-[normal] mt-[42px] pb-[35px] pl-[26px] pr-[35px] pt-[51px] sm:px-5 placeholder:text-blue_gray-700_01 text-blue_gray-700_01 text-left text-xl w-full"
                     name="groupThree"
-                    placeholder="Your Message "
-                    name="groupThree"
-                    placeholder="Your Message "
+                    placeholder="Your Message"
                   ></TextArea>
+
+                  <Button className="bg-gradient10  border border-solid border-white-A700 cursor-pointer font-bold h-[57px] leading-[normal]  mt-[42px] mb-[84px] md:ml-[0] py-[17px] text-center text-gray-50 text-lg tracking-[-0.09px] w-[130px]">
+                    Send
+                  </Button>
                 </div>
                 <Img
                   className="h-[410px] md:ml-[0] ml-[202px] md:mt-0 mt-[171px]"
@@ -1389,9 +1363,6 @@ const SoftwareCompanyWebsitePage = () => {
                 </div>
               </div>
             </div>
-            <Button className="bg-gradient10  border border-solid border-white-A700 cursor-pointer font-bold h-[57px] leading-[normal] mb-[84px] md:ml-[0] ml-[89px] py-[17px] text-center text-gray-50 text-lg tracking-[-0.09px] w-[130px]">
-              Send
-            </Button>
           </div>
           <footer className="flex font-bevietnampro items-center justify-center mt-[97px] md:px-5 w-full">
             <div className="sm:h-[494px] h-[498px] md:h-[784px] relative w-full">
